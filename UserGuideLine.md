@@ -49,22 +49,100 @@ EMAIL_USER=your_email@gmail.com
 EMAIL_PASS=your_app_password
 Install Dependencies:
 
-Bash
-pip install -r requirements.txt
-Run the System:
+# 🖥️ Automatic Startup (Background Protection)
 
-Bash
-pythonw.exe index.pyw
-📂 System Architecture
-Plaintext
-SentinelCore/
-├── logs/               # Secure execution logs
-├── quarantine/         # Isolated threat storage
-├── .env.example        # Configuration template
-├── index.pyw           # Background monitor engine
-└── README.md           # Project documentation
-🛡️ Security Disclaimer
-This project is for educational and research purposes only. It was developed to demonstrate malware analysis techniques and system-level monitoring. The author is not responsible for any damage caused by the misuse of this software. Always test in a controlled virtual environment.
+To ensure SentinelCore automatically protects your system every time you log in to Windows, follow the steps below.
+
+---
+
+## 1️⃣ Create a Shortcut
+
+1. Locate your `index.pyw` file.
+2. Right-click the file.
+3. Select:
+
+```text
+Show more options → Create shortcut
+```
+
+---
+
+## 2️⃣ Enable Administrator Privileges
+
+1. Right-click the newly created shortcut.
+2. Select:
+
+```text
+Properties
+```
+
+3. Under the **Shortcut** tab, click:
+
+```text
+Advanced...
+```
+
+4. Enable:
+
+```text
+☑ Run as administrator
+```
+
+5. Click **OK**.
+
+> ⚠️ Administrator privileges are required for SentinelCore to monitor system-level file activity across multiple drives.
+
+---
+
+## 3️⃣ Move Shortcut to Startup Folder
+
+1. Press:
+
+```text
+Win + R
+```
+
+2. Type:
+
+```text
+shell:startup
+```
+
+3. Press **Enter**.
+
+4. Copy or move the modified shortcut into the Startup folder.
+
+---
+
+## 4️⃣ Verify Background Execution
+
+After your next login:
+
+- Windows may prompt for administrator permission.
+- Accept the prompt to launch SentinelCore.
+- The scanner will run silently in the background.
+
+### To verify:
+1. Open **Task Manager**
+2. Go to:
+
+```text
+Details
+```
+
+3. Look for:
+
+```text
+pythonw.exe
+```
+
+If visible, SentinelCore is actively running in the background.
+
+---
+
+# 🔒 Security Note
+
+SentinelCore operates locally and does not upload scanned files externally unless explicitly configured for cloud integrations or SMTP alerting.
 
 👨‍💻 Author
 [Chuah Ming Yuan] Cybersecurity Student Focus: Reverse Engineering | Network Architecture | IoT Security
