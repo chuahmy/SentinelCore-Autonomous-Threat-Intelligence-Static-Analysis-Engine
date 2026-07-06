@@ -1,4 +1,4 @@
-# 🛡️ SentinelCore  
+# 🛡️ SentinelDrop 
 ### Autonomous Threat Intelligence & Static Analysis Engine  
 
 <p align="center">
